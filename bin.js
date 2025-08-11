@@ -303,10 +303,12 @@ function undoPackageJSONPatch(cwd) {
  */
 function buildGypModule(cwd) {
   const nodeMobileHeaders = path.resolve(
-    path.dirname(require.resolve('nodejs-mobile-react-native')),
+    __dirname,
     platform,
     'libnode',
   );
+
+  console.log(nodeMobileHeaders);
 
   let GYP_DEFINES = `OS=${platform} target_platform=${platform} target_arch=${arch}`;
 
@@ -484,7 +486,7 @@ function buildRustModule(cwd) {
     }
 
     const nodeMobileBin = path.resolve(
-      path.dirname(require.resolve('nodejs-mobile-react-native')),
+      __dirname,
       'android',
       'libnode',
       'bin',
