@@ -26,6 +26,6 @@
   },
   "scripts": {
     "test": "tape test/*.test.js | tap-arc",
-    "postinstall": "vite-node ./hooks/postinstall.ts"
+    "postinstall": "npx vite-node ./hooks/postinstall.ts"
   }
 }
