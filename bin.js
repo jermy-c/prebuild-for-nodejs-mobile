@@ -308,8 +308,6 @@ function buildGypModule(cwd) {
     'libnode',
   );
 
-  console.log(nodeMobileHeaders);
-
   let GYP_DEFINES = `OS=${platform} target_platform=${platform} target_arch=${arch}`;
 
   const androidEnvs = {};
